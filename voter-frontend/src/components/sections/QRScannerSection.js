@@ -24,7 +24,7 @@ const QRScannerSection = () => {
           scannerInstance.clear();
 
           try {
-            const response = await axios.post("http://voter-app-web.onrender.comlocalhost:8000/api/verify-voter/", {
+            const response = await axios.post("https://voter-app-web.onrender.comlocalhost:8000/api/verify-voter/", {
               qr_data: decodedText,
             });
 
@@ -94,7 +94,7 @@ const QRScannerSection = () => {
               </p>
               {voterInfo.image && (
                 <img
-                  src={`http://voter-app-web.onrender.com${voterInfo.image}`}
+                  src={`https://voter-app-web.onrender.com${voterInfo.image}`}
                   alt="Voter"
                   className="voter-image"
                 />

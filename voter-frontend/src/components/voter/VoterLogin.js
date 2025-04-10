@@ -14,7 +14,7 @@ const VoterLogin = () => {
     setVoterInfo(null);
 
     try {
-      const res = await axios.post('http://voter-app-web.onrender.com/api/voter-login/', {
+      const res = await axios.post('https://voter-app-web.onrender.com/api/voter-login/', {
         voter_id: voterId,
       });
 
@@ -54,7 +54,7 @@ const VoterLogin = () => {
           <p><strong>Voter ID:</strong> {voterInfo.voter_id}</p>
           <p><strong>Has Voted:</strong> {voterInfo.has_voted ? 'Yes' : 'No'}</p>
           <img
-            src={`http://localhost:8000${voterInfo.image}`}
+            src={`https://voter-app-web.onrender.com${voterInfo.image}`}
             alt="Voter"
             className="voter-photo"
           />

@@ -150,7 +150,7 @@ useEffect(() => {
           </p>
           {voterDetails.image && (
             <img
-              src={`http://voter-app-web.onrender.com${voterDetails.image}`}
+              src={`https://voter-app-web.onrender.com${voterDetails.image}`}
               alt="Voter"
               width="180"
               style={{ borderRadius: "10px", marginTop: "10px" }}
