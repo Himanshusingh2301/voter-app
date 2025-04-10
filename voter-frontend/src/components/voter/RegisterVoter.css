@@ -1,0 +1,125 @@
+/* Card layout and base styling */
+.register-container {
+    padding: 1.5rem;
+    max-width: 28rem;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .register-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #1f2937;
+  }
+  
+  /* Form inputs */
+  .register-form input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .register-form input:focus {
+    border-color: #2563eb;
+    outline: none;
+  }
+  
+  /* Submit button */
+  .register-btn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.6rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .register-btn:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.02);
+  }
+  
+  /* Image preview */
+  .image-preview-container {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .image-preview-container h3 {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 0.3rem;
+  }
+  
+  .image-preview {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-preview:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* QR code */
+  .qr-container {
+    margin-top: 2rem;
+    text-align: center;
+    animation: fadeIn 0.6s ease;
+  }
+  
+  .qr-container img {
+    width: 160px;
+    height: 160px;
+    border: 2px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .qr-container img:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Message */
+  .message {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  
+  .message.success {
+    color: #16a34a; /* green */
+  }
+  
+  .message.error {
+    color: #dc2626; /* red */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
