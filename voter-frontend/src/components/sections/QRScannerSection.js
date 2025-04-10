@@ -24,7 +24,7 @@ const QRScannerSection = () => {
           scannerInstance.clear();
 
           try {
-            const response = await axios.post("https://voter-app-web.onrender.comlocalhost:8000/api/verify-voter/", {
+            const response = await axios.post("https://voter-app-web.onrender.com/api/verify-voter/", {
               qr_data: decodedText,
             });
 
