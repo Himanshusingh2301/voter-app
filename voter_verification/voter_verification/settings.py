@@ -77,11 +77,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+DATABASES['default']=dj_database_url.parse("postgresql://voter_db_aglk_user:vTn4mSJZbgYkefuwxCLFqREpwWarKnyH@dpg-cvrs6cbuibrs73bpm240-a.oregon-postgres.render.com/voter_db_aglk")
 # If DATABASE_URL is provided, override the default SQLite database
-database_url = os.environ.get('DATABASE_URL')
-if database_url:
-    DATABASES['default'] = dj_database_url.parse(database_url)
+# database_url = os.environ.get('DATABASE_URL')
+# if database_url:
+#     DATABASES['default'] = dj_database_url.parse(database_url)
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
