@@ -14,7 +14,7 @@ const VoterLogin = () => {
     setVoterInfo(null);
 
     try {
-      const res = await axios.post('http://localhost:8000/api/voter-login/', {
+      const res = await axios.post('http://voter-app-web.onrender.com/api/voter-login/', {
         voter_id: voterId,
       });
 

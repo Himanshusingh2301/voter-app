@@ -37,7 +37,7 @@ const RegisterVoter = () => {
     data.append('image', formData.image);
 
     try {
-      const res = await axios.post('http://localhost:8000/api/add-voter/', data, {
+      const res = await axios.post('http://voter-app-web.onrender.com/api/add-voter/', data, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 

@@ -66,11 +66,14 @@ const QRScanner = () => {
     }
   };
 
-  useEffect(() => {
-    return () => {
-      stopScanner(); // Clean up on unmount
-    };
-  }, []);
+useEffect(() => {
+  return () => {
+    if (html5QrCodeRef.current) {
+      html5QrCodeRef.current.stop();
+      html5QrCodeRef.current.clear();
+    }
+  };
+}, []);
 
   return (
     <div style={{ textAlign: "center", padding: "20px" }}>
@@ -147,7 +150,7 @@ const QRScanner = () => {
           </p>
           {voterDetails.image && (
             <img
-              src={`http://localhost:8000${voterDetails.image}`}
+              src={`http://voter-app-web.onrender.com${voterDetails.image}`}
               alt="Voter"
               width="180"
               style={{ borderRadius: "10px", marginTop: "10px" }}
